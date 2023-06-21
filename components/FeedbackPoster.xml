@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="FeedbackPoster" extends="Poster">
+    <script type="text/brightscript" uri="pkg:/components/FeedbackPoster.brs"/>
+    <interface>
+        <field id="response" type="AssocArray" value="" />
+    </interface>
+    <children>
+        <Label
+            translation="[20,20]"
+            id="feedbackLbl"
+            font="font:SmallBoldSystemFont"
+            color="0xFFFFFF"
+            wrap="true"
+            width="800"
+            text=""
+        />
+    </children>
+
+
+</component>

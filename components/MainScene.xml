@@ -28,8 +28,14 @@
             text="Charles Demo"
         />
         <ButtonGroup
-            translation="[200,200]"
+            translation="[100,100]"
             id="btnGroup"
+        />
+        <FeedbackPoster
+            translation="[400,100]"
+            id="feedbackPoster"
+            width="800"
+            height="800"
         />
     </children>
 </component>

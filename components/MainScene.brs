@@ -3,8 +3,8 @@ function init()
     ? "IN MAINSCENE: Initiating Main Secene"
 
     m.keys = ParseJson(ReadAsciiFile("pkg:/assets/keys.json"))
-    m.top.observeFieldScoped("lastCall", "onCall")
     m.btnGroup = m.top.FindNode("btnGroup")
+    m.feedbackPoster = m.top.FindNode("feedbackPoster")
     m.btnGroup.buttons = ["Catfacts", "Weather", "Location", "Age"]
     m.btnGroup.observeFieldScoped("buttonSelected", "onButtonSelected")
     m.btnGroup.SetFocus(true)
@@ -44,9 +44,5 @@ end sub
 sub onFeedResponse(obj)
     response = obj.getData()
     m.responseData = parseJSON(response)
-    ? "Response received: "; m.responseData
-end sub
-
-sub onCall()
-    ? "lastCall changed!"
+    m.feedbackPoster.response = m.responseData
 end sub
